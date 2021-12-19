@@ -1,0 +1,700 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#display{
+    height:5700px;
+    width:100%;
+    
+   
+}
+#navbar{
+    display:flex;
+    height:80px;
+    width:100%;
+    border:1px solid black;
+    font-family: sans-serif;
+    font-size: 18px;
+   
+    align-items: center;
+    background-color: rgb(3, 3, 3);
+
+}
+#earn_100{
+    cursor: pointer;
+}
+#bundle_offer{
+    cursor: pointer;
+}
+#daily_deals{
+    cursor: pointer;
+}
+#gift_card{
+    cursor: pointer;
+}
+#account{
+    cursor: pointer;
+}
+#cart{
+    cursor: pointer;
+}
+#option{
+    display:flex;
+    height:50px;
+    width:600px;
+    border:1px solid black;
+    margin-left: 150px;
+    align-items: center;
+    padding-left: 30px;
+    color:white
+    
+
+}
+#operation{
+    display: flex;
+    height:50px;
+    width:400px;
+    border:1px solid black;
+    margin-left: 200px;
+    
+    color:white;
+    align-items: center;
+    
+}
+#option>div{
+    padding-left: 20px;
+}
+#operation>div{
+    padding-left: 30px; 
+}
+#search-tab{
+    height:36px;
+    width:220px;
+    border:1px solid red;
+    border-radius: 20px;
+}
+#logo{
+    display: flex;
+    
+    padding-left: 50px;
+    
+   
+}
+#a{
+    color:crimson;
+}
+#dd{
+    font-family: sans-serif;
+    font-size: 18px;
+    color:white;
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: bold;
+    
+}
+#more{
+    font-family: sans-serif;
+    font-size: 18px;
+    color:white;
+    background-color: black;
+    border-color: transparent;
+
+}
+#slider{
+    height:630px;
+    overflow: hidden;
+    width:100%;
+    
+
+    
+    border:1px solid black;
+}
+#slider>figure>div{
+    float:left;
+    width:20%;
+    height:20%;
+
+}
+#slider>figure>img{
+    width:50%;
+    float: left;
+}
+
+#top{
+    height:30px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    width:100%;
+    background-color: rgb(255,0,0);
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#slider>figure{
+    position: relative;
+    width:500%;
+    margin:0px;
+    left:0;
+    animation:30s move infinite;
+}
+@keyframes move{
+  0%{
+      left: 0%;
+
+  }
+  10%{
+      left: 0%;
+      
+  }
+  12%{
+      left: -100%;
+      
+  }
+  22%{
+      left: -100%;
+      
+  }
+  24%{
+      left: -200%;
+      
+  }
+  34%{
+      left: -200%;
+      
+  }
+  36%{
+      left: -300%;
+      
+  }
+  46%{
+      left: -300%;
+      
+  }
+  48%{
+      left: -400%;
+      
+  }
+  58%{
+      left: -400%;
+      
+  }
+  
+  60%{
+      left: -300%;
+      
+  }
+  70%{
+      left: -300%;
+      
+  }
+  72%{
+      left: -200%;
+      
+  }
+  82%{
+      left: -200%;
+      
+  }
+  84%{
+      left: -100%;
+      
+  }
+  94%{
+      left: -100%;
+      
+  }
+  96%{
+      left: 0%;
+      
+  }
+
+}
+#block1{
+    display: flex;
+    height:500px;
+    width:100%;
+    border:1px solid black;
+    background-color: black;
+   
+
+}
+#b1{
+    height:450px;
+    width:452px;
+    border:1px solid black;
+    margin:auto;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+#b1p1{
+    color:black;
+    font-weight: bold;
+    font-family: sans-serif;
+
+}
+ #b1p2{
+    color:black;
+    font-weight: bold;
+    font-family: sans-serif;
+    
+}
+#b1p3{
+    color:red;
+    font-weight: bold;
+    font-family: sans-serif;
+    
+}
+#product_img{
+    height:300px;
+    width:450px;
+    border:1px solid transparent;
+    background-color: rgb(211, 207, 207);
+    border-radius: 10px;
+    
+
+}
+#data{
+    height:120px;
+    width:450px;
+    border:1px solid transparent;
+    
+    font-weight: bold;
+    margin-top: 20px;
+    
+
+}
+#price{
+    padding-top: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+#red{
+    color:red;
+    font-size: 20px;
+
+}
+#cut{
+    text-decoration: line-through;
+}
+#star{
+    color:red
+}
+#addcart{
+    background-color: rgb(3, 3, 3);
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    padding:5px;
+    border-radius: 20px;
+    width:150px
+}
+#best_seller{
+    height:100px;
+    width:100%;
+    background-color: black;
+    
+}
+#best_seller>h2{
+    color:white;
+   text-align: center;
+   padding-top: 40px;
+   font-weight: bold;
+   font-size: 60px;
+}
+#one{
+    text-decoration: none;
+    color: white;
+}
+#more>#one{
+    background-color: black;
+    color:white;
+}
+#new_launches{
+    height:450px;
+    width:100%;
+    border:1px solid black;
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(73,73,73);
+
+}
+#new_launches>h1{
+    font-size: 40px;
+    color: white;
+    
+
+}
+#new_launches1{
+    display: flex;
+    height:350px;
+    width:1350px;
+    border:1px solid transparent;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgb(197,197,197);
+
+}
+#new_launches1_img{
+    height:350px;
+    width:350px;
+    border:1px solid transparent;
+    margin-left:80px;
+}
+#new_launches1_text{
+    height:350px;
+    width:800px;
+    border:1px solid transparent;
+    margin-left:50px;
+}
+#new_top{
+    height:50px;
+    width:800px;
+    border:1px solid transparent;
+    margin-top:50px;
+}
+#new_top>p{
+    font-weight: bold;
+    font-size: 16px;
+    font-family: sans-serif;
+
+}
+#new_bottom{
+    height:200px;
+    width:800px;
+    border:1px solid transparent;
+}
+#new_bottom>p{
+    font-size: 16px;
+    font-family: sans-serif;
+}
+#shop_now{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    padding:5px;
+    border-radius: 20px;
+    width:150px;
+    border-color: transparent;
+    
+}
+#block2{
+    display: flex;
+    height:500px;
+    width:100%;
+    border:1px solid black;
+    background-color: black;
+   
+
+}
+#smart_watch{
+    height:100px;
+    width:100%;
+    background-color: black;
+    
+}
+#smart_watch>h2{
+    color:white;
+   text-align: center;
+   padding-top: 40px;
+   font-weight: bold;
+   font-size: 60px;
+}
+#block3{
+    display: flex;
+    height:600px;
+    width:100%;
+    border:1px solid black;
+    background-color: black;
+   
+
+}
+#top_wired{
+    height:100px;
+    width:100%;
+    background-color: black;
+    
+}
+#top_wired>h2{
+    color:white;
+   text-align: center;
+   padding-top: 40px;
+   font-weight: bold;
+   font-size: 60px;
+}
+#cleb_image{
+    display:grid;
+    grid-template-columns: repeat(2, );
+    grid-template-rows: 550px 50px 550px ;
+    border: 1px solid transparent;
+    background-color: black;
+    grid-template-areas: 
+    "a b"
+    "a d"
+    "c d";
+}
+#a{
+    grid-area: a;
+    border: 1px solid transparent;
+    background-image: url("https://cdn.shopify.com/s/files/1/0057/8938/4802/articles/Blog-Post-Diljit_1_1024x1024.jpg?v=1606208584") ;
+    background-position: center;
+    background-size: cover;
+}
+#b{
+    grid-area: b;
+    border: 1px solid transparent;
+    background-image: url("https://pbs.twimg.com/media/EHXeDAYU8AA7r1n?format=jpg&name=large") ;
+    background-position: center;
+    background-size: cover;
+}
+#c{
+    grid-area: c;
+    border: 1px solid transparent;
+    background-image: url("https://www.bollywoodhungama.com/wp-content/uploads/2019/06/After-Kartik-Aaryan-BOAT-ropes-in-Kiara-Advani-as-brand-ambassador.jpg") ;
+    background-position: center;
+    background-size: cover;
+}
+#d{
+    grid-area: d;
+    border: 1px solid transparent;
+    background-image: url("https://www.indiantelevision.com/sites/default/files/styles/smartcrop_800x800/public/images/tv-images/2018/10/24/kartik.jpg?itok=mHOWiKgO") ;
+    background-position: center;
+    background-size: cover;
+}
+#block4{
+    display: flex;
+    height:400px;
+    width:100%;
+    border:1px solid transparent;
+    background-color: black;
+   
+
+}
+*{
+    box-sizing: border-box;
+}
+#blog{
+    height:100px;
+    width:100%;
+    background-color: black;
+    
+}
+#blog>h2{
+    color:white;
+   text-align: center;
+   padding-top: 20px;
+   font-weight: bold;
+   font-size: 60px;
+}
+#blog1{
+    height:250px;
+    width:350px;
+    border:1px solid black;
+    margin-left: 100px;
+    
+    background-color: white;
+}
+
+#blog_img{
+    height:250px;
+    width:350px;
+    border:1px solid transparent;
+    background-color: rgb(211, 207, 207);
+   
+    
+
+}
+#blog_data{
+    height:120px;
+    width:350px;
+    border:1px solid black;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    margin-top: 20px;
+    
+
+}
+#read_more{
+    background-color: rgb(3, 3, 3);
+    color: white;
+    border-color: red;
+    margin-top: 10px;
+    padding:5px;
+    border-radius: 5px;
+    width:100px
+}
+body{
+    background-color: black;
+}
+#runningtext{
+    background-color: #000;
+    height: 100px;
+    
+}
+.text-stroke {
+    -webkit-text-stroke: 1px white;
+    font-weight: 700;
+   
+}
+
+.text-white {
+    color: #fff;
+    font-weight: 700;
+    
+}
+.text-center{
+    font-size: 35px;
+    color: #000;
+    padding-top: 0.8em;
+}
+.firstLightBlack{
+    height: 85px;
+    background-color: rgb(28,28,28);
+    color: white;
+}
+.firstLightBlack > div{
+    width: 60%;
+    justify-content: space-around;
+    display: flex;
+        margin: auto;
+    height: 85px;
+}
+.firstLightBlack > div > div{
+    align-items: center;
+    width: 21%;
+    display: flex;
+        justify-content: space-between;
+    
+  
+}
+.secondlightblack{
+    height: 80px;
+    background-color: rgb(44,44,44);
+    color: rgb(143,143,143);
+}
+.secondlightblack > p{
+    padding-top: 15px;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+.lastblack{
+    height: 600px;
+    background-color: #000;
+    margin: auto;
+    padding-top: 50px;
+}
+.lastblack1{
+width: 80%;
+margin: auto;
+display: grid;
+grid-template-columns: 32% 60%;
+grid-template-rows: 400px;
+grid-gap: 5%;
+}
+
+.lastblack1 > div > div > input{
+width:210px; 
+margin-right: 10px; 
+height: 37px;
+background-color: transparent;
+border: 1px solid rgb(144,144,144);
+outline: 0px;
+color:rgb(144,144,144);
+padding-left: 10px;
+color: rgb(144,144,144);
+border-radius: 3px;
+}
+.lastblack1 > div > div > button{
+color: white;
+font-weight: bold;
+border-radius: 3px;
+width: 36%;
+background-color: transparent;
+border: 1px solid red;
+}
+.lastblack1 > div > div > button:hover{
+  background-color: red;
+}
+.lastblack1 > div > img{
+height: 50px; 
+margin-bottom: 35px;
+}
+.lastblack1 > div  >p{
+color: rgb(144,144,144); 
+font-size: 17px;
+padding-right: 18px;
+}
+.threesmall{
+  display: flex;
+    justify-content: space-around;
+}
+.threesmall > div{
+  width: 30%;
+  justify-content: space-around;
+}
+.threesmall li,h3{
+  color: rgb(144,144,144);
+  padding: 4px;
+  list-style-type: none;
+  cursor: pointer;
+}
+.threesmall h3{
+  color: white;
+  margin-bottom: 15px;
+
+}
+.color-icon{
+ color:white;
+ font-size: 30px;
+ cursor: pointer;
+
+}
+
+.presentS{
+display: flex;
+ width: 15%;
+ margin-top: 20px; 
+ justify-content: space-between;
+ margin-left: 10%; 
+}
+.presentS~div{
+display: flex; 
+width: 80%; 
+justify-content: space-between;
+margin: auto;
+margin-top: 20px;
+}
+.presentS~div~p{
+color: white;
+text-align: center;
+ margin-top: 25px;
+ margin-bottom: 200px;
+}
+
+.presentS~div>div{
+display:flex;
+height: 60px;
+width: 50%;
+}
+
+.presentS~div>div>h3{
+
+color: white; 
+margin-top: 15px;
+font-size: 18px;
+cursor: default;
+}
+
+.presentS~div>div>a{
+margin-left: 2%;
+}
+
+.firstLightBlack h3{
+  color: white;
+}

@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <script src="https://kit.fontawesome.com/cc24f0d97d.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    /************************* nav css ******************************/
+    *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#top{
+    height:30px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    width:100%;
+    background-color: rgb(255,0,0);
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+        #navbar{
+    display:flex;
+    height:80px;
+    width:100%;
+    border:1px solid black;
+    font-family: sans-serif;
+    font-size: 18px;
+   
+    align-items: center;
+    background-color: rgb(3, 3, 3);
+
+}
+#earn_100{
+    cursor: pointer;
+}
+#bundle_offer{
+    cursor: pointer;
+}
+#daily_deals{
+    cursor: pointer;
+}
+#gift_card{
+    cursor: pointer;
+}
+#account{
+    cursor: pointer;
+}
+#cart{
+    cursor: pointer;
+}
+#option{
+    display:flex;
+    height:50px;
+    width:600px;
+    border:1px solid black;
+    margin-left: 150px;
+    align-items: center;
+    padding-left: 30px;
+    color:white
+    
+
+}
+#operation{
+    display: flex;
+    height:50px;
+    width:400px;
+    border:1px solid black;
+    margin-left: 200px;
+    
+    color:white;
+    align-items: center;
+    
+}
+#option>div{
+    padding-left: 20px;
+}
+#operation>div{
+    padding-left: 30px; 
+}
+#search-tab{
+    height:36px;
+    width:220px;
+    border:1px solid red;
+    border-radius: 20px;
+}
+#logo{
+    display: flex;
+    
+    padding-left: 50px;
+    
+   
+}
+#a{
+    color:crimson;
+}
+#dd{
+    font-family: sans-serif;
+    font-size: 18px;
+    color:white;
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: bold;
+    
+}
+#more{
+    font-family: sans-serif;
+    font-size: 18px;
+    color:white;
+    background-color: black;
+    border-color: transparent;
+
+}
+    /******************************** nav css end***************************** */
+    body{
+        background-color: #262626;
+    }
+    .main_div_container{
+       
+        color: white;
+        display: flex;
+        justify-content:space-evenly;
+        margin: 20px;
+       
+    }
+   
+   
+    #center_main_div{
+        width: 100%;
+       
+        margin: auto;
+        }
+    #min_nav{
+        height: 80px;
+     
+    }
+    #itm_div{
+    
+        display: flex;
+        margin-top: 15px;
+    }
+    #img_tag{
+        height: 120px;
+        width: 25%;
+        background-color: #c4c4c4;
+        border-radius: 8px;
+        margin: 9px;
+    }
+    #discr_div{
+        
+        width: 40%;
+    }
+    #price_box{
+        display: flex;
+    
+        width: 50%;
+        justify-content: space-around;
+    }
+    .discription{
+        padding-left: 10PX;
+    }
+    #del_but{
+        
+        height: 25px;
+        background-color: orange;
+        margin-left:70px;
+        margin-top: 50px;
+        width: 15%;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        
+         
+    }
+    #del_but:active {
+        background-color: orange;
+         box-shadow: 0 5px #666;
+         transform: translateY(4px);
+}
+    #dis_pric{
+        text-decoration:line-through;
+    }
+    .tot{
+        
+        height: 50px;
+        width: 40%;
+        margin-top: 10px;
+        text-align: center;
+        
+    }
+    #min_nav{
+        display: flex;
+        justify-content:space-around;
+        width: 90%;
+        margin: auto;
+  
+        margin-top: 20px;
+    }
+    i{
+        margin-top: 10px;
+    }
+    #billing{
+    
+        width: 80%;
+        margin: auto;
+        margin-top: 15px;
+    }
+    .Tot_pr{
+  
+        display: flex;
+        justify-content: space-around;
+    }
+    .pay_btn{
+        width: 40%;
+        height: 30px;
+        background-color: red;
+        margin-left: 30%;
+        margin-top: 30px;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+    }
+    .pay_btn:active{
+        box-shadow: 0 5px #666;
+         transform: translateY(4px);
+    }
+    .left_div{
+        margin-top: 50px;
+        width: 40%;
+       
+         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        
+    }
+    .right_div{
+        margin-top: 50px;
+        width: 40%;
+        height: 400px;
+        
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        
+    }
+    #bill_txt{
+        text-align: center;
+    }
+    #actual_price{
+        color: red;
+    }
+    /*************************************** footer css *********************************/
+
+    *{
+            padding: 0%;
+            margin: 0%;
+        }
+        #runningtext{
+            background-color: #000;
+            height: 100px;
+            
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px white;
+            font-weight: 700;
+           
+        }
+
+        .text-white {
+            color: #fff;
+            font-weight: 700;
+            
+        }
+        .text-center{
+            font-size: 35px;
+            color: #000;
+            padding-top: 0.8em;
+        }
+        .firstLightBlack{
+            height: 85px;
+            background-color: rgb(28,28,28);
+            color: white;
+        }
+        .firstLightBlack > div{
+            width: 60%;
+            justify-content: space-around;
+            display: flex;
+                margin: auto;
+            height: 85px;
+        }
+        .firstLightBlack > div > div{
+            align-items: center;
+            width: 21%;
+            display: flex;
+                justify-content: space-between;
+            
+          
+        }
+        .secondlightblack{
+            height: 80px;
+            background-color: rgb(44,44,44);
+            color: rgb(143,143,143);
+        }
+        .secondlightblack > p{
+            padding-top: 15px;
+            width: 60%;
+            text-align: center;
+            margin: auto;
+        }
+        .lastblack{
+            height: 600px;
+            background-color: #000;
+            margin: auto;
+            padding-top: 50px;
+        }
+      .lastblack1{
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 32% 60%;
+        grid-template-rows: 400px;
+        grid-gap: 5%;
+      }
+
+      .lastblack1 > div > div > input{
+        width:210px; 
+        margin-right: 10px; 
+        height: 37px;
+        background-color: transparent;
+        border: 1px solid rgb(144,144,144);
+        outline: 0px;
+        color:rgb(144,144,144);
+        padding-left: 10px;
+        color: rgb(144,144,144);
+        border-radius: 3px;
+      }
+      .lastblack1 > div > div > button{
+        color: white;
+        font-weight: bold;
+        border-radius: 3px;
+        width: 36%;
+        background-color: transparent;
+        border: 1px solid red;
+      }
+      .lastblack1 > div > div > button:hover{
+          background-color: red;
+      }
+      .lastblack1 > div > img{
+        height: 50px; 
+        margin-bottom: 35px;
+      }
+      .lastblack1 > div  >p{
+        color: rgb(144,144,144); 
+        font-size: 17px;
+        padding-right: 18px;
+      }
+      .threesmall{
+          display: flex;
+            justify-content: space-around;
+      }
+      .threesmall > div{
+          width: 30%;
+          justify-content: space-around;
+      }
+      .threesmall li,h3{
+          color: rgb(144,144,144);
+          padding: 4px;
+          list-style-type: none;
+          cursor: pointer;
+      }
+      .threesmall h3{
+          color: white;
+          margin-bottom: 15px;
+
+      }
+      .color-icon{
+         color:white;
+         font-size: 30px;
+         cursor: pointer;
+
+      }
+
+      .presentS{
+        display: flex;
+         width: 15%;
+         margin-top: 20px; 
+         justify-content: space-between;
+         margin-left: 10%; 
+      }
+      .presentS~div{
+        display: flex; 
+        width: 80%; 
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 20px;
+      }
+      .presentS~div~p{
+        color: white;
+        text-align: center;
+         margin-top: 25px;
+         margin-bottom: 200px;
+      }
+
+      .presentS~div>div{
+        display:flex;
+        height: 60px;
+        width: 50%;
+      }
+
+      .presentS~div>div>h3{
+
+        color: white; 
+        margin-top: 15px;
+        font-size: 18px;
+        cursor: default;
+      }
+
+      .presentS~div>div>a{
+        margin-left: 2%;
+      }
+
+      .firstLightBlack h3{
+          color: white;
+      }
+    /* footer end */
+   
+</style>
+<body>
+    <!-- nav bar  -->
+    <div id="top"><p>15% OFF UPTO Rs.300 USING PAY WITH REWARDS</p></div>
+    <div id="navbar">
+        <div id="logo">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x.png?v=1600753267" height="50px" width="100px" alt="">
+            
+
+        </div> 
+         <div id="option">
+            <div id="shop">
+                <select id="dd">
+                    <option >Shop</option>
+                </select>
+            </div>
+            <div id="daily_deals">
+               Daily Deals
+            </div>
+            <div id="bundle_offer">
+               Bundle Offer
+             </div>
+            <div> 
+                 <select id="more">
+                    <option value="">More</option>
+                    <option value="">Offers</option>
+                    <option value="">Floater</option>
+                    <option value="" >Meet</option>
+                   
+                </select>
+                
+            </div>
+            <div id="earn_100">
+                <i class="fas fa-dollar-sign"></i>
+                Earn 100
+             </div>
+        </div>
+        <div id ="operation">
+            <div id="search-box">
+                <input id="search-tab" type="text" name=""  placeholder= "Search Products">
+            </div>
+            <div id="gift_card"><i class="fas fa-credit-card fa-xl"></i></div>
+            <div id="account"><i class="fas fa-user-alt"></i></div>
+            <div id="cart"><i class="fas fa-shopping-cart fa-xl"></i></div>
+            
+        </div> 
+    </div>
+    <!-- nav bar ends -->
+    
+    <div class="main_div_container">
+        <div class=" left_div">  <div id="center_main_div">
+        </div>
+    </div>
+        <div class=" right_div">
+            <h1 id="bill_txt">Billing Summary</h1>
+            <div id="min_nav">
+            
+                <span> CART<i id="cart_bucket" class="fas fa-shopping-cart fa-2x"></i></span>
+                <div class="tot"><span> Total Amount:</span> <span id="dis_tot"></span></div>
+            </div>
+            
+            <div id="billing">
+                <div class="Tot_pr"><h1>Total Price</h1>
+                <h2 id="cart_bag_disply"> </h2>
+                </div>
+                <div> <button class="pay_btn" onclick="Pyayment_page()"> CHECK OUT </button></div>
+            </div>
+            
+        </div>
+
+    </div>
+      <!-- footer code -->
+
+   <div class="contfooter">
+    <div id="runningtext">
+        <p class="text-center">
+            <marquee scrollamount="10">
+             <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+             <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+             <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+             <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+             <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+             <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+             <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+             <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+             <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+           </marquee>
+        </p> 
+    </div>
+    <div class="firstLightBlack">
+        <div>
+            <div>
+                <img height="40px"  src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/group_186_3x_4616a7a4-8c24-4065-a237-54e3d574bb94.png?v=1611132367" alt="">
+                <h3>Free Shipping</h3>
+            </div>
+            <div><img height="40px"  src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/vector_3x_50a1233e-95d9-4e18-9e8e-757b545e2c06.png?v=1611132367" alt="">
+                <h3>Exclusive Deals</h3>
+            </div>
+            <div>
+                <img height="40px"  src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/vector_2_2x_9d5071e2-154a-4f06-b660-9d0430a18248.png?v=1611132367" alt="">
+                <h3>Secure Checkout</h3>
+            </div>  
+        </div>
+        </div>
+        <div class="secondlightblack">
+            <p>India's fastest growing audio & wearables brand. The most incredible range of wireless earphones, earbuds, headphones, smart watches, and home 
+                From workouts to adventures, boAt will get you sailing!
+            </p>
+        </div>
+            
+        <div class="lastblack">
+            <div class="lastblack1">
+                <div>
+                   <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x.png?v=1600753267" alt="">
+                   <p >Subscribe to email alert,We promise not spam your inbox  </p>
+                    <div style="display: flex; ;margin-top: 10px;">
+                        <input type="text" placeholder="Email Address*">
+                        <button>Subscribe</button> 
+                    </div>
+                </div>
+                <div class="threesmall">
+                      <div>
+                          <h3>SHOP</h3>
+                          <ul>
+                              <li>True Wireless Earbuds</li>
+                              <li>Wireless Headphones</li>
+                              <li>Wired Headphones</li>
+                              <li>Wireless Speakers</li>
+                              <li>Wired Speakers</li>
+                              <li>Home Audio</li>
+                              <li>Mobile Accessories</li>
+                              <li>Smart Watches</li>
+                              <li>TRebel</li>
+                              <li>Misfet</li>
+                              <li>Gift Card</li>
+                              <li>Earn In India</li>
+                              <li>Earn Rs.100</li>
+                          </ul>
+                      </div>
+                      <div>
+                        <h3>HELP</h3>
+                        <ul>
+                            <li>Track Your Order</li>
+                            <li>Warranty & Support</li>
+                            <li>Return Policy</li>
+                            <li>Service Centers</li>
+                            <li>Bulk Orders</li>
+                            <li>FAQs</li>
+                            <li>Why Buy Direct</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3>COMPANY</h3>
+                        <ul>
+                            <li>About BoAt</li>
+                            <li>NEWS</li>
+                            <li>Read Our Blog</li>
+                            <li>High5BoAtheads</li>
+                            <li>Our Partners</li>
+                            <li>Terms Of Service</li>
+                            <li>Privacy Policy</li>
+                            <li>Partners Offer T&Cs</li>
+                        </ul>
+                      </div>  
+                </div>
+            </div>
+
+            <div class="presentS">
+                <a href="https://twitter.com/RockWithboAt"><i class="fab fa-twitter color-icon"></i></a> 
+               <a href="https://www.facebook.com/boat.nirvana/"> <i class="fab fa-facebook-square color-icon"></i></i></a> 
+               <a href="https://www.youtube.com/channel/UCY3JXaO_v8H3E6hTYUp5qWQ"><i class="fab fa-youtube color-icon"> </i></a>
+               <a href="https://www.instagram.com/boat.nirvana/"><i class="fab fa-instagram-square color-icon"></i></a>
+               <a href="https://in.linkedin.com/company/boat-lifestyle"><i class="fab fa-linkedin color-icon"></i></a>
+            </div>
+
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fotter_payment_icn_2_360x.png?v=1632725578"  alt="">
+                
+               <div>
+                    <h3>DOWNLOAD THE APP</h3>
+                    <a href="https://play.google.com/store/apps/details?id=boatlifestylein.android.app"><img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/google-play.png?v=1608620293" alt=""></a>
+                    <a href="https://apps.apple.com/us/app/id1521646593"><img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/app-store.png?v=1608620293" alt=""></a>
+                </div>
+            </div>
+            <p >🄯2021 Emagine Marketing Priveted limited.All Rights Reserved</p>
+        </div>
+</div>
+   <!-- footer ends -->
+   
+    
+    
+</body>
+</html>
+<script>
+     
+    var data=[
+      
+          {
+            image_url:
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_300x.png?v=1639466536",
+            name:"BOAT Airdopes 131 - Wireless Earbuds",
+            color:"CRIMSONCREAM",
+            price:1999,
+            scratch_price:2999,
+            type: "x",
+        },  
+        {
+            image_url:
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/eb8e0fbd-c412-48b3-9c91-5b49ddf35800_300x.png?v=1625045744",
+            name:"boAt Rockerz 450 ",
+            color:"BLANCHEDALMOND",
+            price:1399,
+            scratch_price:3499,
+            type: "x",
+        },
+        {
+            image_url:
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/463af1f7-e428-4399-9452-47e044cfb4cb_300x.png?v=1625046507",
+            name:"BOAT Airdopes 131 - Wireless Earbuds",
+            color:"BLACK",
+            price:1499,
+            scratch_price:2999,
+            type: "x",
+        },
+        
+       
+        
+    ]
+        var sum=0; 
+    display(data)
+      
+    function display(data) {
+    document.querySelector("#center_main_div").innerHTML=""
+    // document.querySelector("tbody").textContent="";   
+    data.map(function (elm,index) {
+
+       var  x=data.length;
+         document.querySelector("#cart_bucket").textContent=x;
+        var itm_div=document.createElement("div")
+            itm_div.setAttribute("id","itm_div")
+        var image=document.createElement("img")
+            image.setAttribute("id","img_tag")
+            image.setAttribute("src",elm.image_url)
+        
+            itm_div.append(image)
+        var discriptiob_div=document.createElement("div")
+            discriptiob_div.setAttribute("id","discr_div")
+        var name=document.createElement("h5")
+            name.setAttribute("class","discription")
+            name.textContent=elm.name;
+
+        var color=document.createElement("span")
+            color.setAttribute("class","discription")
+            color.textContent=elm.color
+
+        var price_box=document.createElement("div")
+            price_box.setAttribute("id","price_box")
+        
+        var price=document.createElement("h3")
+            price.setAttribute("id","actual_price")
+            price.textContent=elm.price
+        var scratch_price=document.createElement("h5")
+            scratch_price.setAttribute("id","dis_pric")
+            scratch_price.textContent=elm.scratch_price;
+
+
+        var button=document.createElement("button")
+            button.setAttribute("id","del_but")
+            button.textContent="Delete";
+            button.addEventListener("click",function(){
+                deleteitm(index,elm)
+            })
+
+
+             totalsum(elm)
+
+        
+            price_box.append(price,scratch_price)
+
+            discriptiob_div.append(name,color,price_box)
+           itm_div.append(discriptiob_div,button)
+            
+
+
+
+        document.querySelector("#center_main_div").append(itm_div)
+    })
+   
+}
+
+function deleteitm(index,elm){
+    data.splice(index,1)
+    localStorage.setItem("cart_item",JSON.stringify(data))
+    sum=0;
+     display(data)
+}
+function totalsum(elm){
+    
+ sum=sum+Number(elm.price)
+ document.querySelector("#dis_tot").textContent=sum;
+  document.querySelector("#cart_bag_disply").textContent=sum;
+}
+function Pyayment_page(){
+    window.location.href="address.html";
+}
+
+document.querySelector("#gift_card").addEventListener("click",function(){
+    window.location.href="Gift_Cardhtml.html";
+});
+document.querySelector("#account").addEventListener("click",function(){
+    window.location.href="sign_in.html";
+});
+document.querySelector("#bundle_offer").addEventListener("click",function(){
+    window.location.href="bundles_of_joy.html";
+});
+document.querySelector("#daily_deals").addEventListener("click",function(){
+    window.location.href ="daily_deals.html"
+});
+
+document.querySelector("#earn_100").addEventListener("click",function(){
+    window.location.href ="earn_100.html"
+});
+</script>
