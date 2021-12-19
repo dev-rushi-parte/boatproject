@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/4899a37ce9.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#top{
+    height:30px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    width:100%;
+    background-color: rgb(255,0,0);
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+        #navbar{
+    display:flex;
+    height:80px;
+    width:100%;
+    border:1px solid black;
+    font-family: sans-serif;
+    font-size: 18px;
+   
+    align-items: center;
+    background-color: rgb(3, 3, 3);
+
+}
+#option{
+    display:flex;
+    height:50px;
+    width:600px;
+    border:1px solid black;
+    margin-left: 150px;
+    align-items: center;
+    padding-left: 30px;
+    color:white
+    
+
+}
+#operation{
+    display: flex;
+    height:50px;
+    width:400px;
+    border:1px solid black;
+    margin-left: 200px;
+    
+    color:white;
+    align-items: center;
+    
+}
+#option>div{
+    padding-left: 20px;
+}
+#operation>div{
+    padding-left: 30px; 
+}
+#search-tab{
+    height:36px;
+    width:220px;
+    border:1px solid red;
+    border-radius: 20px;
+}
+#logo{
+    display: flex;
+    
+    padding-left: 50px;
+    
+   
+}
+#a{
+    color:crimson;
+}
+#dd{
+    font-family: sans-serif;
+    font-size: 18px;
+    color:white;
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: bold;
+    
+}
+#more{
+    font-family: sans-serif;
+    font-size: 18px;
+    color:white;
+    background-color: black;
+    border-color: transparent;
+
+}
+    </style>
+</head>
+<body>
+    <div id="top"><p>15% OFF UPTO Rs.300 USING PAY WITH REWARDS</p></div>
+    <div id="navbar">
+        <div id="logo">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x.png?v=1600753267" height="50px" width="100px" alt="">
+            
+
+        </div> 
+         <div id="option">
+            <div id="shop">
+                <select id="dd">
+                    <option >Shop</option>
+                </select>
+            </div>
+            <div id="daily_deals">
+               Daily Deals
+            </div>
+            <div id="bundle_offer">
+               Bundle Offer
+             </div>
+            <div> 
+                 <select id="more">
+                    <option value="">More</option>
+                    <option value="">Offers</option>
+                    <option value="">Floater</option>
+                    <option value="" >Meet</option>
+                    <!-- <option id="earn_100" value="">Earn 100</option> -->
+                </select>
+                
+            </div>
+            <div id="earn_100">
+                <i class="fas fa-dollar-sign"></i>
+                Earn 100
+             </div>
+        </div>
+        <div id ="operation">
+            <div id="search-box">
+                <input id="search-tab" type="text" name=""  placeholder= "Search Products">
+            </div>
+            <div id="gift_card"><i class="fas fa-credit-card fa-xl"></i></div>
+            <div id="account"><i class="fas fa-user-alt"></i></div>
+            <div id="cart"><i class="fas fa-shopping-cart fa-xl"></i></div>
+            
+        </div> 
+    </div>
+</body>
+</html>

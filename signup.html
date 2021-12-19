@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/fde4a9676c.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+        </style>
+    <title>sign up</title>
+    <style>
+        #containerP{
+            width: 30%;
+            margin: auto;
+            height: 600px;
+           margin-top: 20px;
+
+        }
+        #imagep{
+            display: flex;
+            width: 110px;
+            height: 50px;
+            justify-content: space-between;
+            margin: auto;  
+        }
+
+        #imagep > img{
+            border-radius: 50%;
+        }
+
+        #imagep > img:hover,#signbutton ~ p,#signbutton{
+            cursor: pointer;
+        }
+
+        .create{
+            text-align: center;
+            margin: 50px;
+            font-size: 35px;
+            font-weight: 600;
+            line-height: 35px;
+            font-family: Montserrat, sans-serif;
+        }
+
+        #containerP > p{
+            margin-bottom: 15px;
+            font-family: Montserrat, sans-serif;
+            line-height: 22.4px;
+            font-weight: 200;
+            font-size: 22px;
+            text-decoration: none solid rgb(0, 0, 0);
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
+        #containerP > input {
+            width: 99%;
+            height: 45px;
+            border: 1px solid rgb(216,216,216);
+            outline: 0px;
+            font-size: 18px;
+        }
+       
+        #containerP > div{
+            width: 95%;
+            height: 25px;
+            margin-top: 30px;
+            text-align: center;
+            background-color: rgb(239,68,48);
+            color: white;
+            font-size: 25px;
+            font-weight: 600px;
+            padding: 12px;
+            border-radius: 2%;
+        }
+        #signbutton ~ p{
+            text-align: center;
+           
+        }
+        #signbutton ~ p:hover{
+            color: rgb(16, 214, 214);
+            text-decoration: underline;
+            font-weight: 100;
+            
+        }
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        #runningtext{
+            background-color: #000;
+            height: 100px;
+            
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px white;
+            font-weight: 700;
+           
+        }
+
+        .text-white {
+            color: #fff;
+            font-weight: 700;
+            
+        }
+        .text-center{
+            font-size: 35px;
+            color: #000;
+            padding-top: 0.8em;
+        }
+        .firstLightBlack{
+            height: 85px;
+            background-color: rgb(28,28,28);
+            color: white;
+        }
+        .firstLightBlack > div{
+            width: 60%;
+            justify-content: space-around;
+            display: flex;
+                margin: auto;
+            height: 85px;
+        }
+        .firstLightBlack > div > div{
+            align-items: center;
+            width: 21%;
+            display: flex;
+                justify-content: space-between;
+            
+          
+        }
+        .secondlightblack{
+            height: 80px;
+            background-color: rgb(44,44,44);
+            color: rgb(143,143,143);
+        }
+        .secondlightblack > p{
+            padding-top: 15px;
+            width: 60%;
+            text-align: center;
+            margin: auto;
+        }
+        .lastblack{
+            height: 600px;
+            background-color: #000;
+            margin: auto;
+            padding-top: 50px;
+        }
+      .lastblack1{
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 32% 60%;
+        grid-template-rows: 400px;
+        grid-gap: 5%;
+      }
+
+      .lastblack1 > div > div > input{
+        width:210px; 
+        margin-right: 10px; 
+        height: 37px;
+        background-color: transparent;
+        border: 1px solid rgb(144,144,144);
+        outline: 0px;
+        color:rgb(144,144,144);
+        padding-left: 10px;
+        color: rgb(144,144,144);
+        border-radius: 3px;
+      }
+      .lastblack1 > div > div > button{
+        color: white;
+        font-weight: bold;
+        border-radius: 3px;
+        width: 36%;
+        background-color: transparent;
+        border: 1px solid red;
+      }
+      .lastblack1 > div > div > button:hover{
+          background-color: red;
+      }
+      .lastblack1 > div > img{
+        height: 50px; 
+        margin-bottom: 35px;
+      }
+      .lastblack1 > div  >p{
+        color: rgb(144,144,144); 
+        font-size: 17px;
+        padding-right: 18px;
+      }
+      .threesmall{
+          display: flex;
+            justify-content: space-around;
+      }
+      .threesmall > div{
+          width: 30%;
+          justify-content: space-around;
+      }
+      .threesmall li,h3{
+          color: rgb(144,144,144);
+          padding: 4px;
+          list-style-type: none;
+          cursor: pointer;
+      }
+      .threesmall h3{
+          color: white;
+          margin-bottom: 15px;
+
+      }
+      .color-icon{
+         color:white;
+         font-size: 30px;
+         cursor: pointer;
+
+      }
+
+      .presentS{
+        display: flex;
+         width: 15%;
+         margin-top: 20px; 
+         justify-content: space-between;
+         margin-left: 10%; 
+      }
+      .presentS~div{
+        display: flex; 
+        width: 80%; 
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 20px;
+      }
+      .presentS~div~p{
+        color: white;
+        text-align: center;
+         margin-top: 25px;
+         margin-bottom: 200px;
+      }
+
+      .presentS~div>div{
+        display:flex;
+        height: 60px;
+        width: 50%;
+      }
+
+      .presentS~div>div>h3{
+
+        color: white; 
+        margin-top: 15px;
+        font-size: 18px;
+        cursor: default;
+      }
+
+      .presentS~div>div>a{
+        margin-left: 2%;
+      }
+
+      .firstLightBlack h3{
+          color: white;
+      }
+  </style>
+</head>
+<body>
+    <h2 class="create">Create Account</h2>
+    <div id="imagep">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDwRckJ9kkGqRPCVMwDXJXmqadDVFmh7CSOg&usqp=CAU" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIELkOJ8hXHZXV1P20IG4eo_GdfjJOeWmVlw&usqp=CAU" alt="">
+    </div>
+    <div id="containerP">
+        <p>First Name</p>
+        <input type="text" id="firstname">
+
+        <p>Last Name</p>
+        <input type="text" id="lastname">
+
+        <p>Email</p>
+        <input type="email" id="email">
+
+        <p>Password</p>
+        <input type="password" id="password">
+
+        <div id="signbutton" onclick="createAccount()">Create</div>
+        <p onclick="gologin()"> Log in with an existing account</p>
+    </div>
+    <div class="contfooter">
+        <div id="runningtext">
+            <p class="text-center">
+                <marquee scrollamount="10">
+                 <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                 <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                 <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                 <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                 <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                 <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                 <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                 <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                 <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+               </marquee>
+            </p> 
+        </div>
+        <div class="firstLightBlack">
+            <div>
+                <div>
+                    <img height="40px"  src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/group_186_3x_4616a7a4-8c24-4065-a237-54e3d574bb94.png?v=1611132367" alt="">
+                    <h3>Free Shipping</h3>
+                </div>
+                <div><img height="40px"  src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/vector_3x_50a1233e-95d9-4e18-9e8e-757b545e2c06.png?v=1611132367" alt="">
+                    <h3>Exclusive Deals</h3>
+                </div>
+                <div>
+                    <img height="40px"  src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/vector_2_2x_9d5071e2-154a-4f06-b660-9d0430a18248.png?v=1611132367" alt="">
+                    <h3>Secure Checkout</h3>
+                </div>  
+            </div>
+            </div>
+            <div class="secondlightblack">
+                <p>India's fastest growing audio & wearables brand. The most incredible range of wireless earphones, earbuds, headphones, smart watches, and home 
+                    From workouts to adventures, boAt will get you sailing!
+                </p>
+            </div>
+                
+            <div class="lastblack">
+                <div class="lastblack1">
+                    <div>
+                       <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x.png?v=1600753267" alt="">
+                       <p >Subscribe to email alert,We promise not spam your inbox  </p>
+                        <div style="display: flex; ;margin-top: 10px;">
+                            <input type="text" placeholder="Email Address*">
+                            <button>Subscribe</button> 
+                        </div>
+                    </div>
+                    <div class="threesmall">
+                          <div>
+                              <h3>SHOP</h3>
+                              <ul>
+                                  <li>True Wireless Earbuds</li>
+                                  <li>Wireless Headphones</li>
+                                  <li>Wired Headphones</li>
+                                  <li>Wireless Speakers</li>
+                                  <li>Wired Speakers</li>
+                                  <li>Home Audio</li>
+                                  <li>Mobile Accessories</li>
+                                  <li>Smart Watches</li>
+                                  <li>TRebel</li>
+                                  <li>Misfet</li>
+                                  <li>Gift Card</li>
+                                  <li>Earn In India</li>
+                                  <li>Earn Rs.100</li>
+                              </ul>
+                          </div>
+                          <div>
+                            <h3>HELP</h3>
+                            <ul>
+                                <li>Track Your Order</li>
+                                <li>Warranty & Support</li>
+                                <li>Return Policy</li>
+                                <li>Service Centers</li>
+                                <li>Bulk Orders</li>
+                                <li>FAQs</li>
+                                <li>Why Buy Direct</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h3>COMPANY</h3>
+                            <ul>
+                                <li>About BoAt</li>
+                                <li>NEWS</li>
+                                <li>Read Our Blog</li>
+                                <li>High5BoAtheads</li>
+                                <li>Our Partners</li>
+                                <li>Terms Of Service</li>
+                                <li>Privacy Policy</li>
+                                <li>Partners Offer T&Cs</li>
+                            </ul>
+                          </div>  
+                    </div>
+                </div>
+
+                <div class="presentS">
+                    <a href="https://twitter.com/RockWithboAt"><i class="fab fa-twitter color-icon"></i></a> 
+                   <a href="https://www.facebook.com/boat.nirvana/"> <i class="fab fa-facebook-square color-icon"></i></i></a> 
+                   <a href="https://www.youtube.com/channel/UCY3JXaO_v8H3E6hTYUp5qWQ"><i class="fab fa-youtube color-icon"> </i></a>
+                   <a href="https://www.instagram.com/boat.nirvana/"><i class="fab fa-instagram-square color-icon"></i></a>
+                   <a href="https://in.linkedin.com/company/boat-lifestyle"><i class="fab fa-linkedin color-icon"></i></a>
+                </div>
+
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fotter_payment_icn_2_360x.png?v=1632725578"  alt="">
+                    
+                   <div>
+                        <h3>DOWNLOAD THE APP</h3>
+                        <a href="https://play.google.com/store/apps/details?id=boatlifestylein.android.app"><img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/google-play.png?v=1608620293" alt=""></a>
+                        <a href="https://apps.apple.com/us/app/id1521646593"><img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/app-store.png?v=1608620293" alt=""></a>
+                    </div>
+                </div>
+                <p >🄯2021 Emagine Marketing Priveted limited.All Rights Reserved</p>
+            </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function createAccount(){
+        let flag =true;
+        let first_name = document.getElementById('firstname').value;
+        let last_name = document.getElementById("lastname").value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById("password").value;
+        
+        if(first_name ==  "" || last_name== "" || email==  "" || password ==  "" ){
+            alert("please fill all the details");
+            return;
+        }
+
+        let signup_details = {
+            "first_name" :first_name,
+            "last_name" : last_name,
+            "email":email,
+            "password":password,
+        }
+         
+        
+         let arr= localStorage.getItem("Details");
+     
+
+         if(arr == null){
+             arr = []
+         
+         }else{
+            arr = JSON.parse(localStorage.getItem("Details"))
+           arr.forEach(el => {
+            if(el.email == signup_details.email ){
+                    alert("User already exist")
+                    flag = false;
+                    return;
+                }
+           });
+            if(flag == false){
+                return;
+            }
+            
+         }
+         
+         arr.push(signup_details)
+         localStorage.setItem("Details" , JSON.stringify(arr));
+         alert("Account Created")
+         window.location.href = "sign_in.html"
+    }
+
+    function gologin(){
+        window.location.href = "sign_in.html"
+    }
+
+</script>
