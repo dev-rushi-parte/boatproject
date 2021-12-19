@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boat Payment Gateway</title>
+    <link rel="stylesheet" href="">
+    <style>
+      * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#main {
+  width: 50%;
+  height: auto;
+
+  margin: auto;
+}
+.boat {
+  width: 100%;
+  height: 100px;
+
+  margin: auto;
+}
+.boat img {
+  margin: 20px;
+}
+.login {
+  display: flex;
+  margin-bottom: 20px;
+}
+.login-col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.login-col span {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 23px;
+  color: #000000;
+}
+
+.note {
+  width: 100%;
+  height: 30px;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: rgb(225, 25, 37);
+}
+.note p {
+  font-size: 14px;
+  color: white;
+  padding: 7px;
+}
+.block {
+  margin: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+.add {
+  width: 100%;
+  height: 450px;
+  /* background-color: rgb(227,218,219);  */
+}
+.addname {
+  font-size: 20px;
+  padding-left: 50px;
+  padding-top: 20px;
+  font-family: sans-serif;
+  font-weight: 500;
+  color: rgb(75, 68, 68);
+  display: inline-block;
+}
+.right {
+  text-align: right;
+  padding-right: 20px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.89) !important;
+}
+
+.mail input {
+  color: black;
+  background-color: transparent;
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  border-style: none none solid none;
+  padding-left: 10px;
+}
+.name input {
+  color: black;
+  background-color: transparent;
+  width: 100%;
+  height: 30px;
+  border-style: none none solid none;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.lable {
+  padding: 10px;
+  padding-left: 10px;
+}
+.div {
+  padding-top: 20px;
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex > div {
+  width: 49%;
+}
+.lastn {
+  padding-left: 20px;
+}
+.in {
+  float: right;
+  font-weight: 400;
+  width: 40%;
+  background-color: #d61a0d;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-size: 15px;
+  color: white;
+}
+.in a {
+  text-decoration: none;
+  color: white;
+}
+
+.lastn input {
+  color: black;
+  background-color: transparent;
+  width: 100%;
+  height: 30px;
+  border-style: none none solid none;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.lablelst {
+  padding-left: 30px;
+}
+.country {
+  padding-top: 10px;
+}
+.star::after {
+  content: "*";
+  color: red;
+}
+select {
+  color: black;
+  background-color: transparent;
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  border-style: none none solid none;
+  padding-left: 10px;
+}
+
+.order {
+  width: 50%;
+  margin: auto;
+}
+
+.button {
+  width: 100%;
+  height: 3em;
+  margin-top: 15px;
+  background-color: #f32d1f;
+  border-radius: 25px;
+  padding: 14px 20px;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.nav {
+  padding-left: 24%;
+  margin-bottom: 50px;
+}
+
+    </style>
+
+</head>
+<body>
+    <div id="main";>
+    <div class='boat';>
+        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_2.png?78378"
+        alt="boat";
+        height="80%";
+        width="30%";>
+    </div>
+    <div class='note';> <p>Note: Due to COVID related lockdowns, 
+        please expect a delay in the delivery of your order.</p></div>
+        <div > <a class='block'; href="" > Cart ></a>
+             <a >Information  > </a> 
+             <a href="">Payment</a> </div> 
+
+
+
+
+
+      <div class='add';>
+         <div><p class='addname';>DELIVERY ADDRESS</ADDRESS></p></div> 
+        <a href="";> <div class='right';  >Change</div></a>
+            <div >
+              <label class='lable star'; >Email</label>
+              <div class='mail ';><input type="email"; placeholder="Enter Your Email"; value = "masai@gmail.com"></div>
+            </div> 
+            <div class='flex';>             
+               <div class="div"; >
+              <label class='lable';>First Name</label>
+              <div class='name ';><input type="text"; placeholder="Enter First Name"; value = "Abhiraj" ></div>
+            </div> 
+            <div class='div';>
+                <label class="lable lablelst"; > Last Name</label>
+                <div class='lastn';> <input type="text"; placeholder="Enter Last Name" ; value = "Jain" >  </div>
+            </div>
+            </div>
+             <div class='country'>
+              <label class='lable star'; >Country/region</label>
+              <div  >
+                <select >
+            <option   value="India">India</option>
+            <option value="New Zealand">New Zealand</option>
+            <option   value="England">England</option>
+            <option   value="United States">United States</option>
+        </select>
+        </div>
+            </div> 
+
+               <div class='flex';>
+               
+               <div class="div"; >
+              <label class='lable star';>Address</label>
+              <div class='name ';><input type="text"; placeholder="Enter Your Address";
+              value = "17/1 , sirsa colony, gyaneshwar" ></div>
+            </div> 
+            <div class='div';>
+                <label class="lable lablelst"; > Apartment</label>
+                <div class='lastn';> <input type="text"; placeholder="Apartment,suit,etc(optional)" value="Global Society">  </div>
+            </div>
+            </div>
+            
+               <div class='flex';>
+               
+               <div class="div"; >
+              <label class='lable';>City</label>
+              <div class='name ';><input type="text"; placeholder="Enter City"; value="Ratiya" ></div>
+            </div> 
+            <div class='div';>
+                <label class="lable lablelst star"; > Phone</label>
+                <div class='lastn';> <input type="number"; placeholder="Enter Your No." ; value="8898675688">  </div>
+            </div>
+            </div>
+
+            <div class='flex';>
+               
+               <div class="div"; >
+              <label class='lable star';>State</label>
+              <div class='name ';><input type="text"; placeholder="Enter State"; value = "Hariyana" ></div>
+            </div> 
+            <div class='div';>
+                <label class="lable lablelst star"; > Pin Code</label>
+                <div class='lastn';> <input type="number"; placeholder="Enter Your Pin No."; value="125051">  </div>
+            </div> 
+         </div>
+        </div>
+          
+      </div > 
+     
+           <div class="order";> <button class='button'; onclick="goPayment()" >PLACE ORDER</button></div>
+
+
+
+           <div class="nav" style="margin-left:20px">
+            <footer >
+            <nav >
+               <a class= "information" href="">Refund Policy</a>
+              
+             <a class="information" href=""style="margin-left:30px">Return Policy</a>
+             
+              <a class="information" href=""style="margin-left:30px">Terms of Service</a>
+             </nav>
+            </footer>
+        </div>    
+    
+</body>
+</html>
+<script>
+   function goPayment(){
+      window.location.href = "mypayment.html"
+   }
+</script>

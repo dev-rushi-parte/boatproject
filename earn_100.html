@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/4899a37ce9.js" crossorigin="anonymous"></script>
+    <style>
+             *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+        }
+        /* .topnav {
+            overflow: hidden;
+            background-color: #000000;
+            color: white;
+        }
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 40px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        } */
+        /* .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        } */
+        .topnav a.active {
+            background-color: #2196F3;
+            color: white;
+        }
+        .search-container {
+            float: right;
+        }
+        .topnav input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+        .topnav .search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li.dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1a1a1a;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: red;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        #navtext {
+            color: white;
+            /* padding-left: 4px; */
+        }
+        @media screen and (max-width: 600px) {
+            .topnav .search-container {
+                float: none;
+            }
+            .topnav a,
+            .topnav input[type=text],
+            .topnav .search-container button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+            .topnav input[type=text] {
+                border: 1px solid #ccc;
+            }
+        }
+        .toppest {
+            background-color: red;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 7px;
+        }
+        .gray-block img {
+            width: 500px;
+        }
+        .big {
+            /* border: red solid; */
+            width: auto;
+            height: 500px;
+            display: flex;
+            /* flex-direction: column; */
+        }
+        .left {
+            /* border: yellow solid; */
+            width: 550px;
+            height: 300px;
+            margin: 20px
+        }
+        .right img {
+            /* border: transparent solid; */
+            width: 700px;
+            height: 400px;
+            /* float: fixed; */
+        }
+        h1 {
+            font-size: 55px;
+        }
+        /* earn div  */
+        .earn {
+            width: auto;
+            background-color: #1a1a1a;
+            /* height: 200px; */
+            /* border: solid red; */
+            margin-top: 10px;
+        }
+        .earnbtn {
+            background-color: red;
+            padding: 10px 35px;
+            margin: 20px;
+            border: 0;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        #a {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: 500;
+            border-radius: 15px;
+        }
+        /* below earn  */
+        .below-earn {
+            background-color: #1a1a1a;
+            /* height: 200px; */
+            /* border: solid red; */
+            margin-top: 10px;
+            height: 100px;
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+        .referral {
+            text-align: center;
+            /* border: solid red; */
+            color: white;
+            padding: 50px;
+        }
+        /* -----faq----- */
+        .faq {
+            background-color: #1c1c1c;
+            /* border: solid red; */
+            height: 500px;
+            width: auto;
+            margin-top: 15px;
+        }
+        /* --------------  */
+        .accordion {
+            background-color: #1a1a1a;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            box-shadow: 0px 1px gray;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        .active,
+        .accordion:hover {
+            background-color: 0;
+            text-align: left;
+        }
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: #1a1a1a;
+            overflow: hidden;
+            color: white;
+            text-align: left;
+        }
+        h2 {
+            text-align: center;
+            color: white;
+        }
+        .accordion:after {
+            content: '\02795';
+            /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: white;
+            float: right;
+            margin-left: 5px;
+        }
+        .active:after {
+            content: "\2796";
+            color: white;
+            /* Unicode character for "minus" sign (-) */
+        }
+        /* --------sliding-------- */
+        .sliding {
+            width: auto;
+            /* margin-top:15px ; */
+            height: 100px;
+            /* border: solid red; */
+            color: white;
+            padding: 60px;
+            font-size: 32px;
+            float: left;
+        }
+        .locals {
+            margin: 0;
+            ;
+            margin-top: 15px;
+            height: 150px;
+            /* border: solid blue; */
+            margin-top: 20px;
+            background-color: #1c1c1c;
+        }
+        /* #shipping{
+            padding: 30px;
+        } */
+        /* */ 
+
+
+  
+#top{
+    height:30px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    width:100%;
+    background-color: rgb(255,0,0);
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+        #navbar{
+    display:flex;
+    height:80px;
+    width:100%;
+    border:1px solid black;
+    font-family: sans-serif;
+    font-size: 18px;
+   
+    align-items: center;
+    background-color: rgb(3, 3, 3);
+
+}
+#earn_100{
+    cursor: pointer;
+}
+#bundle_offer{
+    cursor: pointer;
+}
+#daily_deals{
+    cursor: pointer;
+}
+#gift_card{
+    cursor: pointer;
+}
+#account{
+    cursor: pointer;
+}
+#cart{
+    cursor: pointer;
+}
+#option{
+    display:flex;
+    height:50px;
+    width:600px;
+    border:1px solid black;
+    margin-left: 150px;
+    align-items: center;
+    padding-left: 30px;
+    color:white
+    
+
+}
+#operation{
+    display: flex;
+    height:50px;
+    width:400px;
+    border:1px solid black;
+    margin-left: 200px;
+    
+    color:white;
+    align-items: center;
+    
+}
+#option>div{
+    padding-left: 20px;
+}
+#operation>div{
+    padding-left: 30px; 
+}
+#search-tab{
+    height:36px;
+    width:220px;
+    border:1px solid red;
+    border-radius: 20px;
+}
+#logo{
+    display: flex;
+    
+    padding-left: 50px;
+    
+   
+}
+#a{
+    color:crimson;
+}
+#dd{
+    font-family: sans-serif;
+    font-size: 18px;
+    color:white;
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: bold;
+    
+}
+#more{
+    font-family: sans-serif;
+    font-size: 18px;
+    color:white;
+    background-color: black;
+    border-color: transparent;
+
+}
+/* =================================(footer CSS)====================================================== */
+
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        #runningtext{
+            background-color: #000;
+            height: 100px;
+            
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px white;
+            font-weight: 700;
+           
+        }
+
+        .text-white {
+            color: #fff;
+            font-weight: 700;
+            
+        }
+        .text-center{
+            font-size: 35px;
+            color: #000;
+            padding-top: 0.8em;
+        }
+        .firstLightBlack{
+            height: 85px;
+            background-color: rgb(28,28,28);
+            color: white;
+        }
+        .firstLightBlack > div{
+            width: 60%;
+            justify-content: space-around;
+            display: flex;
+                margin: auto;
+            height: 85px;
+        }
+        .firstLightBlack > div > div{
+            align-items: center;
+            width: 21%;
+            display: flex;
+                justify-content: space-between;
+            
+          
+        }
+        .secondlightblack{
+            height: 80px;
+            background-color: rgb(44,44,44);
+            color: rgb(143,143,143);
+        }
+        .secondlightblack > p{
+            padding-top: 15px;
+            width: 60%;
+            text-align: center;
+            margin: auto;
+        }
+        .lastblack{
+            height: 600px;
+            background-color: #000;
+            margin: auto;
+            padding-top: 50px;
+        }
+      .lastblack1{
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 32% 60%;
+        grid-template-rows: 400px;
+        grid-gap: 5%;
+      }
+
+      .lastblack1 > div > div > input{
+        width:210px; 
+        margin-right: 10px; 
+        height: 37px;
+        background-color: transparent;
+        border: 1px solid rgb(144,144,144);
+        outline: 0px;
+        color:rgb(144,144,144);
+        padding-left: 10px;
+        color: rgb(144,144,144);
+        border-radius: 3px;
+      }
+      .lastblack1 > div > div > button{
+        color: white;
+        font-weight: bold;
+        border-radius: 3px;
+        width: 36%;
+        background-color: transparent;
+        border: 1px solid red;
+      }
+      .lastblack1 > div > div > button:hover{
+          background-color: red;
+      }
+      .lastblack1 > div > img{
+        height: 50px; 
+        margin-bottom: 35px;
+      }
+      .lastblack1 > div  >p{
+        color: rgb(144,144,144); 
+        font-size: 17px;
+        padding-right: 18px;
+      }
+      .threesmall{
+          display: flex;
+            justify-content: space-around;
+      }
+      .threesmall > div{
+          width: 30%;
+          justify-content: space-around;
+      }
+      .threesmall li,h3{
+          color: rgb(144,144,144);
+          padding: 4px;
+          list-style-type: none;
+          cursor: pointer;
+      }
+      .threesmall h3{
+          color: white;
+          margin-bottom: 15px;
+
+      }
+      .color-icon{
+         color:white;
+         font-size: 30px;
+         cursor: pointer;
+
+      }
+
+      .presentS{
+        display: flex;
+         width: 15%;
+         margin-top: 20px; 
+         justify-content: space-between;
+         margin-left: 10%; 
+      }
+      .presentS~div{
+        display: flex; 
+        width: 80%; 
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 20px;
+      }
+      .presentS~div~p{
+        color: white;
+        text-align: center;
+         margin-top: 25px;
+         margin-bottom: 200px;
+      }
+
+      .presentS~div>div{
+        display:flex;
+        height: 60px;
+        width: 50%;
+      }
+
+      .presentS~div>div>h3{
+
+        color: white; 
+        margin-top: 15px;
+        font-size: 18px;
+        cursor: default;
+      }
+
+      .presentS~div>div>a{
+        margin-left: 2%;
+      }
+
+      .firstLightBlack h3{
+          color: white;
+      }
+      /* =====================================(footer css )======================================== */
+          </style>
+</head>
+<body>
+    <div id="top"><p>15% OFF UPTO Rs.300 USING PAY WITH REWARDS</p></div>
+    <div id="navbar">
+        <div id="logo">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x.png?v=1600753267" height="50px" width="100px" alt="">
+            
+
+        </div> 
+         <div id="option">
+            <div id="shop">
+                <select id="dd">
+                    <option >Shop</option>
+                </select>
+            </div>
+            <div id="daily_deals">
+               Daily Deals
+            </div>
+            <div id="bundle_offer">
+               Bundle Offer
+             </div>
+            <div> 
+                 <select id="more">
+                    <option value="">More</option>
+                    <option value="">Offers</option>
+                    <option value="">Floater</option>
+                    <option value="" >Meet</option>
+                    <!-- <option id="earn_100" value="">Earn 100</option> -->
+                </select>
+                
+            </div>
+            <div id="earn_100">
+                <i class="fas fa-dollar-sign"></i>
+                Earn 100
+             </div>
+        </div>
+        <div id ="operation">
+            <div id="search-box">
+                <input id="search-tab" type="text" name=""  placeholder= "Search Products">
+            </div>
+            <div id="gift_card"><i class="fas fa-credit-card fa-xl"></i></div>
+            <div id="account"><i class="fas fa-user-alt"></i></div>
+            <div id="cart"><i class="fas fa-shopping-cart fa-xl"></i></div>
+            
+        </div> 
+    </div>
+    <div style="padding-left:16px">
+    </div>
+    <!-- -----------ending of all navbars----------- -->
+    <div style="background-color: #1a1a1a;    
+    text-align: center;
+    padding: 30px; ">
+        <img src="https://clientcdn.notifyvisitors.com/boat/logo.png">
+        <br>
+        <!-- share your love for boat is over here  -->
+        <!-- big div  -->
+        <div class="big">
+            <div class="left">
+                <div>
+                    <h1 style="color: white;">Invite your <span style="color: red;">friends</span> &amp; Earn <span
+                            style="color: red;">₹100</span> every time</h1>
+                </div>
+                <div style="display: flex;">
+                    <div class="gray-block">
+                        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Blog-Header-desktop.jpg?v=1604480765" />
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="https://clientcdn.notifyvisitors.com/boat/people.png" />
+            </div>
+        </div>
+        <!-- Earn re.100  -->
+        <div class="earn">
+            <!-- button  -->
+            <a href="https://www.boat-lifestyle.com/account/login">
+                <button class="earnbtn"><b>Earn Rs.100</b></button></a>
+            <p id="a">
+                The referral program is open to only existing boAt Lifestyle users who have placed an order through the
+                website or app before.
+                <br>
+                Over 65000 boAtheads have earned over 80 lac rupees with the boAt Referral Program. Refer now.
+            </p>
+        </div>
+        <div>
+            <p class="below-earn">
+                Over 65000 boAtheads have earned rewards with the boAt Referral Program. Refer now.
+            </p>
+        </div>
+        <!-- how referral works  -->
+        <div class="referral">
+            <h2> How Referral Works</h2>
+            <img src="https://clientcdn.notifyvisitors.com/boat/steps.png">
+            <br>
+            <a style="float: right; color: white;" href="javascript:void(0)">*T&amp;C Apply</a>
+        </div>
+        <!-- ---------------FAQs --------------- -->
+        <div class="faq">
+            <h2>FAQs</h2>
+            <button class="accordion">What is the boAt Referral Program?</button>
+            <div class="panel">
+                <p>The boAt Referral program is an exciting way for you to earn rewards on boAt products, by sharing
+                    your love of boAt with your friends. You both get Rs.100 off when your friend makes their first
+                    purchase. .</p>
+            </div>
+            <button class="accordion">Who can share the Referral code?</button>
+            <div class="panel">
+                <p>If you're an existing user on boAt, ie. have placed an order before, you're eligible to share your
+                    unique link with your friends. </p>
+            </div>
+            <button class="accordion">How to refer someone to boAt?</button>
+            <div class="panel">
+                <p>
+                    1. Log into your boAt account. <br>
+                    2. Go to the referral section. <br>
+                    3. Share your referral link with your friend via whatsapp, email, or facebook.
+                </p>
+            </div>
+            <button class="accordion">How can I avail the discount code shared by my friend?</button>
+            <div class="panel">
+                <p>
+                    Simply apply your unique code during checkout to avail your discount.
+                    <br>
+                    <br>
+                    I shared my code with a friend. When will I receive my discount? You will receive your Rs.100 off
+                    discount code via email, 15 days after your friend completes their first purchase on
+                    www.boat-lifestyle.com". <br>
+                    <br>
+                    However, if your friend has cancelled their order, the code won’t be sent to you.
+                </p>
+            </div>
+            <button class="accordion">Where is the Referral discount applicable?</button>
+            <div class="panel">
+                <p>
+                    The referral discount is only applicable for purchases on www.boat-lifestyle.com or the boAt mobile
+                    app.
+                </p>
+            </div>
+            <button class="accordion">What is the minimum order value?</button>
+            <div class="panel">
+                <p>
+                    The discount will be applicable on minimum order of Rs.299.
+                </p>
+            </div>
+        </div>
+        <!-- <div class="sliding"> -->
+            <!-- <marquee width="190%" scrollamount="18" direction="left" height="100px">
+                India’s No.1 Earwear Audio Brand. India’s No.1 Earwear Audio Brand. India’s No.1 Earwear Audio Brand.
+                India’s No.1 Earwear Audio Brand.
+            </marquee> -->
+            <!-- <div class="locals">
+                <!-- <img src="./bars.png" alt="image" id="shipping" /> -->
+            <!-- </div> -->
+            <div class="contfooter">
+                <div id="runningtext">
+                    <p class="text-center">
+                        <marquee scrollamount="10">
+                         <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                         <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                         <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                         <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                         <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                         <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                         <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                         <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                         <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                       </marquee>
+                    </p> 
+                </div>
+                <div class="firstLightBlack">
+                    <div>
+                        <div>
+                            <img height="40px"  src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/group_186_3x_4616a7a4-8c24-4065-a237-54e3d574bb94.png?v=1611132367" alt="">
+                            <h3>Free Shipping</h3>
+                        </div>
+                        <div><img height="40px"  src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/vector_3x_50a1233e-95d9-4e18-9e8e-757b545e2c06.png?v=1611132367" alt="">
+                            <h3>Exclusive Deals</h3>
+                        </div>
+                        <div>
+                            <img height="40px"  src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/vector_2_2x_9d5071e2-154a-4f06-b660-9d0430a18248.png?v=1611132367" alt="">
+                            <h3>Secure Checkout</h3>
+                        </div>  
+                    </div>
+                    </div>
+                    <div class="secondlightblack">
+                        <p>India's fastest growing audio & wearables brand. The most incredible range of wireless earphones, earbuds, headphones, smart watches, and home 
+                            From workouts to adventures, boAt will get you sailing!
+                        </p>
+                    </div>
+                        
+                    <div class="lastblack">
+                        <div class="lastblack1">
+                            <div>
+                               <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x.png?v=1600753267" alt="">
+                               <p >Subscribe to email alert,We promise not spam your inbox  </p>
+                                <div style="display: flex; ;margin-top: 10px;">
+                                    <input type="text" placeholder="Email Address*">
+                                    <button>Subscribe</button> 
+                                </div>
+                            </div>
+                            <div class="threesmall">
+                                  <div>
+                                      <h3>SHOP</h3>
+                                      <ul>
+                                          <li>True Wireless Earbuds</li>
+                                          <li>Wireless Headphones</li>
+                                          <li>Wired Headphones</li>
+                                          <li>Wireless Speakers</li>
+                                          <li>Wired Speakers</li>
+                                          <li>Home Audio</li>
+                                          <li>Mobile Accessories</li>
+                                          <li>Smart Watches</li>
+                                          <li>TRebel</li>
+                                          <li>Misfet</li>
+                                          <li>Gift Card</li>
+                                          <li>Earn In India</li>
+                                          <li>Earn Rs.100</li>
+                                      </ul>
+                                  </div>
+                                  <div>
+                                    <h3>HELP</h3>
+                                    <ul>
+                                        <li>Track Your Order</li>
+                                        <li>Warranty & Support</li>
+                                        <li>Return Policy</li>
+                                        <li>Service Centers</li>
+                                        <li>Bulk Orders</li>
+                                        <li>FAQs</li>
+                                        <li>Why Buy Direct</li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h3>COMPANY</h3>
+                                    <ul>
+                                        <li>About BoAt</li>
+                                        <li>NEWS</li>
+                                        <li>Read Our Blog</li>
+                                        <li>High5BoAtheads</li>
+                                        <li>Our Partners</li>
+                                        <li>Terms Of Service</li>
+                                        <li>Privacy Policy</li>
+                                        <li>Partners Offer T&Cs</li>
+                                    </ul>
+                                  </div>  
+                            </div>
+                        </div>
+        
+                        <div class="presentS">
+                            <a href="https://twitter.com/RockWithboAt"><i class="fab fa-twitter color-icon"></i></a> 
+                           <a href="https://www.facebook.com/boat.nirvana/"> <i class="fab fa-facebook-square color-icon"></i></i></a> 
+                           <a href="https://www.youtube.com/channel/UCY3JXaO_v8H3E6hTYUp5qWQ"><i class="fab fa-youtube color-icon"> </i></a>
+                           <a href="https://www.instagram.com/boat.nirvana/"><i class="fab fa-instagram-square color-icon"></i></a>
+                           <a href="https://in.linkedin.com/company/boat-lifestyle"><i class="fab fa-linkedin color-icon"></i></a>
+                        </div>
+        
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fotter_payment_icn_2_360x.png?v=1632725578"  alt="">
+                            
+                           <div>
+                                <h3>DOWNLOAD THE APP</h3>
+                                <a href="https://play.google.com/store/apps/details?id=boatlifestylein.android.app"><img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/google-play.png?v=1608620293" alt=""></a>
+                                <a href="https://apps.apple.com/us/app/id1521646593"><img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/app-store.png?v=1608620293" alt=""></a>
+                            </div>
+                        </div>
+                        <p >🄯2021 Emagine Marketing Priveted limited.All Rights Reserved</p>
+                    </div>
+            </div>
+        <!-- </div> -->
+</body>
+</html>
+<!-- javascript  -->
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+    document.querySelector("#gift_card").addEventListener("click",function(){
+    window.location.href="Gift_Cardhtml.html";
+});
+document.querySelector("#account").addEventListener("click",function(){
+    window.location.href="sign_in.html";
+});
+document.querySelector("#bundle_offer").addEventListener("click",function(){
+    window.location.href="bundles_of_joy.html";
+});
+document.querySelector("#daily_deals").addEventListener("click",function(){
+    window.location.href ="daily_deals.html"
+});
+document.querySelector("#cart").addEventListener("click",function(){
+    window.location.href ="cart_page.html"
+});
+
+</script>
